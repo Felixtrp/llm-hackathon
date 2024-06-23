@@ -20,7 +20,7 @@ CORS(app)
 @app.route('/api', methods=['POST'])
 def process_answers():
     data = request.json
-    test_data = predict_response()
+    test_data = predict_response(data)
     # Process the data and generate a response
     response = {
         'message': test_data,
@@ -29,7 +29,7 @@ def process_answers():
     return jsonify(response)
 
 
-def predict_response():
+def predict_response(data):
     # TODO(developer): Update and un-comment below line
     project_id = "cambridge-law24cam-7853"
 
@@ -38,7 +38,7 @@ def predict_response():
     model = GenerativeModel(model_name="gemini-1.5-flash-001")
 
     response = model.generate_content(
-        "What's a good name for a flower shop that specializes in selling bouquets of dried flowers?"
+        str(data) + "Provide me with a summary in a nice format of this user's claim that they can forward to lawyers"
     )
     print(response.text)
     return (response.text)

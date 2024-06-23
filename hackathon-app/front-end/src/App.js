@@ -1,23 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import Questions from './components/Questions';
+import PersonalDetails from './components/PersonalDetails';
+import CaseDetails from './components/CaseDetails';
+import Final from './components/Final';
 import CaseRepo from './components/CaseRepo';
-import Form from './components/Form';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/questions" element={<Questions />} />
-        <Route path="/CaseRepo" element={<CaseRepo />} />
-        <Route path="/Form" element={<Form />} />
+        <Route path="/personal-details" element={<PersonalDetails />} />
+        <Route path="/case-details" element={<CaseDetails />} />
+        <Route path="/final" element={<Final/>} />
+        <Route path="/case-repo" element={<CaseRepo/>} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
-
-// A Comment.

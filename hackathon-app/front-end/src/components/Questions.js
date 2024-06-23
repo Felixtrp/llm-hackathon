@@ -21,6 +21,8 @@ function Questions() {
     }
   };
 
+  
+
   if (result) {
     return (
       <div style={{ textAlign: 'center', marginTop: '10%' }}>
