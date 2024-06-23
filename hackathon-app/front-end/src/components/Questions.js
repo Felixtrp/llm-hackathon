@@ -3,7 +3,7 @@ import React from 'react';
 function Questions() {
   return (
     <div style={{ textAlign: 'center', marginTop: '10%' }}>
-      <h1>Quiz Questions</h1>
+      <h1>Your Case</h1>
       <form>
         <div style={{ marginBottom: '20px' }}>
           <label>
