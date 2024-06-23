@@ -38,7 +38,8 @@ def predict_response(data):
     model = GenerativeModel(model_name="gemini-1.5-flash-001")
 
     response = model.generate_content(
-        str(data) + "Provide me with a summary in a nice format of this user's claim that they can forward to lawyers"
+        "You will be given user answers to personal questions. Use this information to first summerise their case and second, classify the area of legal expertise needed for a lawyer working on this case and suggest followup questions. /n Some legal examples for legal areas are: Criminal defenseCivil litigation Family law (divorce, custody, child support)Housing disputes (evictions, landlord-tenant issues)Immigration proceedingsWorkplace discriminationWage and hour disputesDebt collection defensePredatory lending issuesConsumer fraud casesDomestic violence restraining ordersAdoption and guardianshipChild custody and support mattersPolice misconductDiscrimination based on race, gender, disability, etc. Freedom of speech and assembly issues Environmental impact assessments Environmental justice Land use and zoning issues affecting community health and safety [/INST]"
+        + str(data)
     )
     print(response.text)
     return (response.text)
