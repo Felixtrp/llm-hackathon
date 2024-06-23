@@ -5,7 +5,7 @@ function Home() {
   let navigate = useNavigate();
 
   const startQuiz = () => {
-    navigate('/questions');
+    navigate('/Form');
   };
 
   const loadRepos = () => {
